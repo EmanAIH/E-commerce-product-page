@@ -1,0 +1,251 @@
+/****     import the fonts     ****/
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+
+
+/**** General styles *****/
+
+:root {
+    --primary-orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+
+/**** Body *****/
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--light-grayish-blue);
+}
+
+
+
+
+/**** Header and Nav *****/
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    width: 90%;
+    max-width: 1100px;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid var(--grayish-blue);
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo-div{
+    margin-right: 0.7rem;
+}
+
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 0.7rem;
+}
+
+
+.nav-links a{
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+    font-weight: 400;
+}
+
+
+.nav-links a:hover{
+    border-bottom: 2px solid var(--primary-orange);
+
+}  /** needs some change!!!! **/
+
+
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.right-header img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.right-header img:nth-child(2):hover{
+    border: 2px solid var(--primary-orange);
+    border-radius: 50%;
+}
+
+
+
+/**** Product Section ****/
+
+
+.product{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px 0;
+    gap: 50px;    
+}
+
+.product-image img {
+    width: 350px;
+    border-radius: 10px;
+  }
+
+
+.product-details {
+    max-width: 500px;
+}
+
+.product-details h4 {
+    color: var(--dark-grayish-blue);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.product-details h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+  
+.product-details p {
+    color: var(--dark-grayish-blue);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+/* Price */
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.current-price{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.discount {
+    background: var(--black);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/***** Cart Actions ******/
+.cart-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+  
+.cart-actions button {
+    background: var(--primary-orange);
+    color: var(--black);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+.cart-actions button:hover {
+    cursor: pointer;
+  }
+
+.add-to-cart:hover{
+    opacity: 0.7;
+}
+.cart-actions .decrease,
+  .cart-actions .increase {
+    background: var(--light-grayish-blue);
+    color: var(--primary-orange);
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* .amount {
+    font-size: 18px;
+    font-weight: bold;
+} */
+
+.add-to-cart img{
+    width: 24px;
+    color: black;
+    margin-right: 20px;
+} /*** needs to be fixed**/
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .product-image img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  }
