@@ -28,7 +28,9 @@
       </ul>     
     </nav>
     <div class="right-header">
-      <img src="/images/icon-cart.svg" alt="cart icon">
+      <img src="/images/icon-cart.svg" class ="cart-icon" alt="cart icon">
+      <div id="cart-bar" class="cart-bar">
+    </div>
       <img src="/images/image-avatar.png" alt="avatar image">
     </div>
   </header>  
@@ -37,9 +39,22 @@
   <!-- Main Content -->
   <main>
     <section class="product">
-      <div class="product-image">
-        <img src="/images/image-product-1.jpg" alt="">
+      <div class="product-images">
+        <div class="product-image">
+          <!-- Main Image -->
+          <img id="main-image" src="/images/image-product-1.jpg" alt="product1">
+        </div>
+          <!-- Thumbnail Images -->
+      <div class="thumbnails">
+        <img src="/images/image-product-1-thumbnail.jpg" alt="product1 thumbnail" class="thumbnail" onclick="changeImage('/images/image-product-1.jpg', this)">
+        <img src="/images/image-product-2-thumbnail.jpg" alt="product2 thumbnail" class="thumbnail" onclick="changeImage('/images/image-product-2.jpg', this)">
+        <img src="/images/image-product-3-thumbnail.jpg" alt="product3 thumbnail" class="thumbnail" onclick="changeImage('/images/image-product-3.jpg', this)">
+        <img src="/images/image-product-4-thumbnail.jpg" alt="product4 thumbnail" class="thumbnail" onclick="changeImage('/images/image-product-4.jpg', this)">
       </div>
+      </div>
+    
+
+    <!-- Product Details -->
       <div class="product-details">
         <h4>  Sneaker Company</h4>
         <h1>  Fall Limited Edition Sneakers        </h1>
@@ -57,6 +72,7 @@
           <button class="increase">+</button>
           <button class="add-to-cart"> <img src="/images/icon-cart.svg" alt="icon cart"> Add to cart </button>
         </div>
+
       </div>
 
     </section>
