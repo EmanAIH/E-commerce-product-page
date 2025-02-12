@@ -231,6 +231,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const closeMenu = document.getElementById("close-menu");
 const navLinks = document.querySelector(".nav-links");
